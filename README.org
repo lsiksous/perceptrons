@@ -1,0 +1,55 @@
+#+TITLE: Introduction aux réseaux de neurones artificiels
+
+
+* Objectif
+Le but de ce brief est de s'approprier les notions élémentaires pour comprendre
+le fonctionnement des réseaux de neurones artificiels.
+
+
+* Contexte
+Comprendre les notions de bases associées aux réseaux de neurones artificiels et
+développer les supports pédagogiques pour pouvoir les expliquer et les illustrer
+à ses pairs.
+
+Pour cela, une veille pédagogique obéissant au plan suivant devra être construite :
+
+- Du neurone biologique au neurone artificiel : présenter les analogies entre neurones biologique et artificiel.
+- Réseaux de neurones artificiels
+  - Présenter ce qu'est un perceptron
+  - Présenter ce qu'est un perceptron multi-couche
+    - Détailler notamment les notions de couches d'entrée, de couches cachées, de couches de sortie.
+  - Expliquer comment faire de la régression avec un perceptron multi-couche
+    - Architecture du réseau
+    - Fonctions d'activation
+    - Fonction de coût
+  - Expliquer comment faire de la classification (binaire et multiclasse) avec un perceptron multi-couche
+    - Architecture du réseau
+    - Fonctions d'activation
+    - Fonction de coût
+- Qu'est-ce-que le "Deep Learning" ou apprentissage profond ?
+- Pour celles et ceux qui veulent aller plus loin : décrire l'algorithme de
+  rétro-propagation du gradient.
+  
+La régression par un perceptron multi-couche sera illustrée dans un Jupyter
+Notebook sur l'exemple du Boston house prices dataset. Inspirez-vous de la ligne
+de code suivante (sklearn) :
+- MLPRegressor(hidden_layer_sizes='à définir', activation='à définir',
+  solver='lbfgs', alpha=0.0001, max_iter=10000, random_state=0, max_fun=15000)
+  
+La classification par un perceptron multi-couche sera illustrée dans un Jupyter
+Notebook sur l'exemple du Breast cancer wisconsin (diagnostic)
+dataset. Inspirez-vous de la ligne de code suivante (sklearn) :
+- MLPClassifier(hidden_layer_sizes='à définir', activation='à définir',
+  solver='lbfgs', alpha=0.0001, max_iter=10000, random_state=0, max_fun=15000)
+  
+* Modalités pédagogiques
+
+Veille pédagogique : travail en équipes (3 à 4 apprenant.e.s). Jupyter
+Notebooks : travail personnel.
+
+* Livrables
+
+Une présentation type "Powerpoint", faisant office de veille pédagogique. Deux
+Jupyter Notebooks : classification (exemple du Breast cancer wisconsin
+(diagnostic) dataset), et régression (exemple du Boston house prices dataset).
+
