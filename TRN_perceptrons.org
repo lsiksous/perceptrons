@@ -60,60 +60,10 @@
 
 #+begin_src emacs-lisp
 (setq org-src-fontify-natively t)
-
-(setq lsp-semantic-tokens-enable t)
-(setq lsp-enable-symbol-highlighting t)
-
-(setq lsp-enable-file-watchers nil
-      read-process-output-max (* 1024 1024)
-      gc-cons-threshold 100000000
-      lsp-idle-delay 0.5
-      ;;
-      lsp-eldoc-hook nil
-      lsp-eldoc-enable-hover nil
-
-      ;;pas de fil d'ariane
-      lsp-headerline-breadcrumb-enable nil
-      ;; pas de imenu voir menu-list
-      lsp-enable-imenu nil
-      ;; lentille
-      lsp-lens-enable t
- 
-      lsp-semantic-highlighting t
-      lsp-modeline-code-actions-enable t
-      )
-  
-(setq lsp-completion-provider :company
-      lsp-completion-show-detail t
-      lsp-completion-show-kind t)
-
-(setq lsp-ui-doc-enable t
-      lsp-ui-doc-show-with-mouse nil
-      lsp-ui-doc-show-with-cursor t
-      lsp-ui-doc-use-childframe t
-      
-      lsp-ui-sideline-diagnostic-max-line-length 80
-
-      ;; lsp-ui-imenu
-      lsp-ui-imenu-enable nil
-      ;; lsp-ui-peek
-      lsp-ui-peek-enable t
-      ;; lsp-ui-sideline
-      lsp-ui-sideline-enable t
-      lsp-ui-sideline-ignore-duplicate t
-      lsp-ui-sideline-show-symbol t
-      lsp-ui-sideline-show-hover t
-      lsp-ui-sideline-show-diagnostics t
-      lsp-ui-sideline-show-code-actions t
-      )
-
-(setq lsp-diagnostics-provider :none
-      lsp-modeline-diagnostics-enable nil
-      lsp-signature-auto-activate nil ;; you could manually request them via `lsp-signature-activate`
-      lsp-signature-render-documentation nil)
 #+end_src
 
 #+RESULTS:
+: t
 
 ** Imports
 
@@ -186,6 +136,7 @@ f.for_type_by_name('pandas.core.frame', 'DataFrame', pd_dataframe_to_org)
 :end:
 
 ** Matplotlib setup
+
 #+begin_src jupyter-python
 import matplotlib.font_manager
 [f.name for f in matplotlib.font_manager.fontManager.ttflist]
@@ -389,6 +340,7 @@ print("The model performance for training set")
 print("--------------------------------------")
 print('RMSE is {}'.format(rmse))
 print('R2 score is {}'.format(r2))
+
 print("\n")
 #+end_src
 
